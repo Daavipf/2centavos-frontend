@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'klavika';
+  src: url('./assets/fonts/klavika-bold.woff2') format('woff2'),
+       url('./assets/fonts/klavika-bold.woff') format('woff'),
+       url('./assets/fonts/klavika-bold.ttf') format('truetype');
+}
