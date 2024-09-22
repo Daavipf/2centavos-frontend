@@ -3,7 +3,7 @@ import { FaHome, FaSearch, FaPenAlt, FaBell, FaUserCircle } from "react-icons/fa
 
 export default function BottomMenu(){
   return (
-    <footer className="fixed bottom-0 left-0">
+    <footer className="fixed bottom-0 left-0 bg-white">
       <ul className="h-16 w-screen border-t border-slate-200 flex items-center justify-around">
         <li>
           <Link to={'/'} className="text-xl">
@@ -15,11 +15,11 @@ export default function BottomMenu(){
             <FaSearch/>
           </Link>
         </li>
-        <li className="w-14 h-14 -mt-8 rounded-full shadow bg-amber-600 flex items-center justify-center">
-          <Link to={'/escrever'} className="text-xl text-white">
-            <FaPenAlt/>
-          </Link>
-        </li>
+        <Link to={'/escrever'} className="text-xl text-white">
+          <li className="w-14 h-14 -mt-8 rounded-full shadow bg-amber-600 flex items-center justify-center cursor-pointer">
+              <FaPenAlt/>
+          </li>
+        </Link>
         <li>
           <Link to={'/notificacoes'} className="text-xl">
             <FaBell/>

@@ -23,11 +23,12 @@ export default function Register(){
       <h1 className="mb-8 font-klavika text-4xl text-amber-600">2centavos</h1>
       <h2>Crie sua conta</h2>
       <form onSubmit={handleSubmit} className="w-full mt-4 flex flex-col gap-4">
+      <input type="text" name="realname" placeholder="Seu nome" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
         <input type="text" name="username" placeholder="Seu nome de Usuário" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
         <input type="email" name="email" placeholder="Seu e-mail" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
         <input type="password" name="password" placeholder="Sua Senha" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
         <input type="password" name="confirm_password" placeholder="Confirme a Senha" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
-        <button type="submit" className="mt-4 p-4 rounded-lg shadow-lg bg-amber-600 text-white font-semibold">Entrar</button>
+        <button type="submit" className="mt-4 p-4 rounded-lg shadow-lg bg-amber-600 text-white font-semibold">Cadastrar</button>
       </form>
     </main>
   )
