@@ -59,7 +59,18 @@ export default function useAuth(){
     }
     setFlashMessage(msgText)
   }
+
+  async function resetPassword(new_passwords, reset_token){
+    let msgText = "Senha redefinida com sucesso!"
+    try {
+      await api.post(`/auth/resetpassword/${reset_token}`, new_passwords)
+      navigate('/login')
+    } catch (error) {
+      msgText = error.response.data.message
+    }
+    setFlashMessage(msgText)
+  }
   
-  return {login, logout, register, forgotPassword, authenticated}
+  return {login, logout, register, forgotPassword, resetPassword, authenticated}
 
 }

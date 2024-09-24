@@ -12,6 +12,7 @@ import Layout from './components/layout/Layout'
 import Login from './components/pages/Auth/Login'
 import Register from './components/pages/Auth/Register'
 import ForgotPassword from './components/pages/Auth/ForgotPassword'
+import ResetPassword from './components/pages/Auth/ResetPassword'
 import Home from './components/pages/app/Home'
 import Search from './components/pages/app/Search'
 import Settings from './components/pages/app/Settings'
@@ -28,6 +29,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Register/>}/>
           <Route path='/esqueceusenha' element={<ForgotPassword/>}/>
+          <Route path='/redefinirsenha/:reset_token' element={<ResetPassword/>}/>
           <Route path='/' element={<RotaProtegida><Layout/></RotaProtegida>}>
             <Route index element={<Home/>}/>
             <Route path='/buscar' element={<Search/>}/>
