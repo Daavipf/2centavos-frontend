@@ -48,7 +48,18 @@ export default function useAuth(){
     navigate('/login')
     setFlashMessage("Logout realizado com sucesso")
   }
+
+  async function forgotPassword(email){
+    let msgText = "E-mail enviado! Cheque sua caixa postal"
+    try {
+      await api.post('/auth/forgotpassword', email)
+      navigate('/login')
+    } catch (error) {
+      msgText = error.response.data.message
+    }
+    setFlashMessage(msgText)
+  }
   
-  return {login, logout, register, authenticated}
+  return {login, logout, register, forgotPassword, authenticated}
 
 }

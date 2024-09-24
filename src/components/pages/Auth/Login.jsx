@@ -22,6 +22,7 @@ export default function Login(){
       <form onSubmit={handleSubmit} className="w-full mt-4 flex flex-col gap-4">
         <input type="email" name="email" placeholder="Seu e-mail" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
         <input type="password" name="password" placeholder="Sua Senha" onChange={handleChange} className="p-4 rounded-lg shadow border-none focus:ring-0 bg-slate-50"/>
+        <Link to={'/esqueceusenha'} className="text-center text-sm text-amber-800">Esqueceu a senha?</Link>
         <button type="submit" className="mt-4 p-4 rounded-lg shadow-lg bg-amber-600 text-white font-semibold">Entrar</button>
       </form>
       <span className="mt-4 text-sm">Não tem uma conta? <Link to={'/cadastro'} className="text-amber-800">Cadastre-se</Link></span>

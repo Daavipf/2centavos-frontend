@@ -11,6 +11,7 @@ import Layout from './components/layout/Layout'
 // Páginas
 import Login from './components/pages/Auth/Login'
 import Register from './components/pages/Auth/Register'
+import ForgotPassword from './components/pages/Auth/ForgotPassword'
 import Home from './components/pages/app/Home'
 import Search from './components/pages/app/Search'
 import Settings from './components/pages/app/Settings'
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login/>}/>
           <Route path='/cadastro' element={<Register/>}/>
+          <Route path='/esqueceusenha' element={<ForgotPassword/>}/>
           <Route path='/' element={<RotaProtegida><Layout/></RotaProtegida>}>
             <Route index element={<Home/>}/>
             <Route path='/buscar' element={<Search/>}/>
