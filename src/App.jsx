@@ -30,12 +30,12 @@ function App() {
           <Route path='/cadastro' element={<Register/>}/>
           <Route path='/esqueceusenha' element={<ForgotPassword/>}/>
           <Route path='/redefinirsenha/:reset_token' element={<ResetPassword/>}/>
-          <Route path='/' element={<RotaProtegida><Layout/></RotaProtegida>}>
+          <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path='/buscar' element={<Search/>}/>
-            <Route path='/escrever' element={<WritePost/>}/>
-            <Route path='/notificacoes' element={<Notifications/>}/>
-            <Route path='/perfil' element={<Profile/>}/>
+            <Route path='/escrever' element={<RotaProtegida><WritePost/></RotaProtegida>}/>
+            <Route path='/notificacoes' element={<RotaProtegida><Notifications/></RotaProtegida>}/>
+            <Route path='/perfil' element={<RotaProtegida><Profile/></RotaProtegida>}/>
           </Route>
         </Routes>
         <Message/>

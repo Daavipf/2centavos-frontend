@@ -9,7 +9,6 @@ export default function Home(){
       await api.get('/posts/readall')
         .then((response)=>{
           setPosts(response.data)
-          //console.log(response.data)
         })
     }
     fetchPosts()
@@ -21,7 +20,7 @@ export default function Home(){
         {posts.length > 0 ? 
           (posts.map((post)=>(
               <li key={post._id} className="w-full">
-                <PostInFeed text={post.text} username={post.author.username} realname={post.author.realname}/>
+                <PostInFeed post={post}/>
               </li>
             ))
           ) : (
